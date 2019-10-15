@@ -1,118 +1,144 @@
-# Hyde
+<p align="center" class="has-mb-6">
+<img class="not-gallery-item" height="48" src="https://ppoffice.github.io/hexo-theme-icarus/images/logo.svg">
+<br> A simple, delicate, and modern theme for the static site generator Hexo.
+<br>
+<a href="https://ppoffice.github.io/hexo-theme-icarus/">Preview</a> |
+<a href="https://ppoffice.github.io/hexo-theme-icarus/categories/">Documentation</a> |
+<a href="https://github.com/ppoffice/hexo-theme-icarus/archive/master.zip">Download</a>
+<br>
+</p>
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+![Icarus](https://ppoffice.github.io/hexo-theme-icarus/gallery/preview.png?1 "Icarus Preview")
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+### :cd: Installation
 
+Download & extract or `git clone` Icarus from GitHub to your blog's theme folder, and that's it!
 
-## Contents
-
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
-
-
-## Usage
-
-Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
-
-
-## Options
-
-Hyde includes some customizable options, typically applied via classes on the `<body>` element.
-
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
-```
----
-layout: page
-title: About
----
+```shell
+git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus
 ```
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+Once started, Icarus will remind you of any missing dependencies and configuration files.
 
+### :gift: Features
 
-### Sticky sidebar content
+**Extensive Plugin Support**
 
-By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
+Icarus includes plentiful search, comment, sharing and other plugins out of the box. You can choose any of them to enrich your
+blog experience, or build your own plugin easily referring to the existing Icarus plugins.
 
-```html
-<!-- Default sidebar -->
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    ...
-  </div>
+Comment plugins
+
+- [Changyan](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/changyan-comment-plugin/)
+- [Disqus](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/disqus-comment-plugin/)
+- [Facebook](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/facebook-comment-plugin/)
+- [Gitment](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/gitment-comment-plugin/)
+- [Isso](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/isso-comment-plugin/)
+- [LiveRe](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/livere-comment-plugin/)
+- [Valine](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/valine-comment-plugin/)
+
+Search plugins
+
+- [Insight Search](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Search/insight-search-plugin/)
+- [Google Custom Search Engine](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Search/google-cse-plugin/)
+- [Baidu Site Search](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Search/baidu-search-plugin/)
+
+Share plugins
+
+- [AddThis](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/addthis-share-plugin/)
+- [AddToAny](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/addtoany-share-plugin/)
+- [Baidu Share](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/baidu-share-plugin/)
+- [Share.js](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/share-js-share-plugin/)
+- [ShareThis](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/sharethis-share-plugin/)
+
+Donation Buttons
+
+- [Alipay](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Alipay)
+- [Wechat](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Wechat)
+- [Paypal](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Paypal)
+- [Patreon](https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Patreon)
+
+Other plugins
+
+- [Hexo Tag Plugin](https://ppoffice.github.io/hexo-theme-icarus/Configuration/Posts/hexo-built-in-tag-helpers/)
+- [lightGallery & Justified Gallery](https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/gallery-plugin/)
+- [MathJax](https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/mathjax-plugin/)
+- [Site Analytics](https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/)
+
+**Rich Code Highlight Theme Choices**
+
+Icarus directly import code highlight themes from the [highlight.js](https://highlightjs.org/) package, and makes more than
+70 highlight themes available to you.
+
+<table>
+    <tr>
+        <td><img src="https://ppoffice.github.io/hexo-theme-icarus/gallery/code-highlight/atom-one-light.png"></td>
+        <td><img src="https://ppoffice.github.io/hexo-theme-icarus/gallery/code-highlight/monokai.png"></td>
+        <td><img src="https://ppoffice.github.io/hexo-theme-icarus/gallery/code-highlight/androidstudio.png"></td>
+    </tr>
+</table>
+
+**Elastic Theme Configuration**
+
+In addition to the minimalistic and easy-to-understand configuration design, Icarus allows you to set configurations on a
+per-page basis with the ability to merge and override partial configurations.
+
+<div>
+<table>
+    <tr>
+        <th>_config.yml</th>
+        <th>post.md</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>menu:
+    Archives: /archives
+    Categories: /categories
+    Tags: /tags
+    About: /about</pre>
+        </td>
+        <td>
+            <pre>title: A Simple Post
+menu:
+    Go Home: /index.html
+---
+# Here is some simple markdown.</pre>
+        </td>
+    </tr>
+    <tr>
+        <td><img height="40" src="https://ppoffice.github.io/hexo-theme-icarus/gallery/navbar/main-config.png"></td>
+        <td><img height="40" src="https://ppoffice.github.io/hexo-theme-icarus/gallery/navbar/post-config.png"></td>
+    </tr>
+</table>
 </div>
 
-<!-- Modified sidebar -->
-<div class="sidebar">
-  <div class="container">
-    ...
-  </div>
-</div>
-```
+**Responsive Layout**
 
+No matter what modern browsering device your audiences are using, they can always get the best experience because Icarus's responsive
+layout across multiple viewpoints.
 
-### Themes
+![Responsive Layout](https://ppoffice.github.io/hexo-theme-icarus/gallery/responsive.png)
 
-Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
+### :hammer: Development
 
-![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
+This project is built with
 
-There are eight themes available at this time.
+- Hexo 3.7.1
+- Ejs
+- Stylus
+- Bulma 0.7.2
 
-![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
+Please refer to the documentation for Icarus implementation details.
 
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
+### :tada: Contribute
 
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
+If you feel like to help us build a better Icarus, you can
 
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
+:electric_plug: Write a plugin |
+:black_nib: <a href="https://github.com/ppoffice/hexo-theme-icarus/new/site/source/_posts">Submit a tutorial</a> |
+:triangular_flag_on_post: <a href="https://github.com/ppoffice/hexo-theme-icarus/issues/new">Report a bug</a> |
+:earth_asia: <a href="https://github.com/ppoffice/hexo-theme-icarus/tree/master/languages">Add a translation</a>
 
-### Reverse layout
+### :memo: License
 
-![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
-
-Hyde's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-## Development
-
-Hyde has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ppoffice/hexo-theme-icarus/blob/master/LICENSE) file for details.
